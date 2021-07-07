@@ -3,13 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'config',
-    loadChildren: () => import('./config/config.module').then(m => m.ConfigModule )
-  },
-  {
     path: '',
-    loadChildren: () => import('banner/Module').then(m => m.BannerModule),
-    outlet: 'banner'
+    loadChildren: () => import('./config/config.module').then(m => m.ConfigModule )
   },
 ];
 

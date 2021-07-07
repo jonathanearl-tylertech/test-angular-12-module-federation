@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  padding: 16px;
+  margin: 16px;
+  border: 1px solid black;
+  & > * {
+    margin-bottom: 1em;
+  }
+}
