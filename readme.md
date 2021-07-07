@@ -1,13 +1,11 @@
 ### steps
 
-ng new client
-ng new shared-config
+`ng new client`
 
-
-
-
-cd client
-ng add @angular-architects/module-federation@next
+`ng new shared-config`
+`cd shared-config`
+create config component 
+`ng add @angular-architects/module-federation@next`
 * yes
-* client
-* 4200
+* shared-config
+* 5000
