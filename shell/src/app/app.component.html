@@ -1,3 +1,14 @@
-<div>app</div>
-<router-outlet></router-outlet>
-
+<div class="app">
+  <header>
+    <router-outlet name="omnibar"></router-outlet>
+  </header>
+  <main>
+    <nav>
+      <div>navbar</div>
+    </nav>
+    <section>
+      <router-outlet></router-outlet>
+      <footer>footer</footer>
+    </section>
+  </main>
+</div>
