@@ -24,27 +24,21 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
 
-        // For remotes (please adjust)
-        name: "banner",
-        filename: "remoteEntry.js",
-        exposes: {
-            './Module': './/src/app/banner/banner.module.ts',
-        },
+      // For remotes (please adjust)
+      name: "banner",
+      filename: "remoteEntry.js",
+      exposes: {
+        './Module': './/src/app/banner/banner.module.ts',
+        './Omnibar': './/src/app/omnibar/omnibar.module.ts'
+      },
+      shared: share({
+        "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
 
-        // For hosts (please adjust)
-        // remotes: {
-        //     "mfe1": "mfe1@http://localhost:3000/remoteEntry.js",
-
-        // },
-
-        shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-
-          ...sharedMappings.getDescriptors()
-        })
+        ...sharedMappings.getDescriptors()
+      })
 
     }),
     sharedMappings.getPlugin()
