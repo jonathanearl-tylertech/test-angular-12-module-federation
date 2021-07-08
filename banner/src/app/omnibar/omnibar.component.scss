@@ -1,0 +1,16 @@
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  justify-items: space-between;
+}
+
+.icon {
+  margin-right: auto;
+  padding: 20px;
+}
+
+.app-loader, .profile {
+  padding: 20px;
+}
