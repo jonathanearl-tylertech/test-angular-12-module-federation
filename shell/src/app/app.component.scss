@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: greenyellow;
+  background-color: white;
 }
 
 main {
@@ -12,7 +12,10 @@ main {
 }
 
 nav {
-  width: 320px;
+  padding: 1em;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
 }
 
 section {

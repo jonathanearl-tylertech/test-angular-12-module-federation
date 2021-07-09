@@ -5,9 +5,15 @@
   <main>
     <nav>
       <div>navbar</div>
+      <a [routerLink]="['']">home</a>
+      <a [routerLink]="['/about']">about</a>
+      <a [routerLink]="['/config']">remote config</a>
     </nav>
     <section>
-      <router-outlet></router-outlet>
+      <section class="page">
+        <router-outlet name="banner"></router-outlet>
+        <router-outlet></router-outlet>
+      </section>
       <footer>footer</footer>
     </section>
   </main>
